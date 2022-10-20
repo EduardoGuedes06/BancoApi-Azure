@@ -1,0 +1,17 @@
+C:\Projetos\C#\ApiBanco-main\scr\Data\bin\Release\net6.0\Data.deps.json
+C:\Projetos\C#\ApiBanco-main\scr\Data\bin\Release\net6.0\Data.runtimeconfig.json
+C:\Projetos\C#\ApiBanco-main\scr\Data\bin\Release\net6.0\Data.dll
+C:\Projetos\C#\ApiBanco-main\scr\Data\bin\Release\net6.0\Data.pdb
+C:\Projetos\C#\ApiBanco-main\scr\Data\bin\Release\net6.0\Business.dll
+C:\Projetos\C#\ApiBanco-main\scr\Data\bin\Release\net6.0\Business.pdb
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.csproj.AssemblyReference.cache
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.AssemblyInfoInputs.cache
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.AssemblyInfo.cs
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.csproj.CoreCompileInputs.cache
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.csproj.CopyComplete
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.dll
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\refint\Data.dll
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.pdb
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\Data.genruntimeconfig.cache
+C:\Projetos\C#\ApiBanco-main\scr\Data\obj\Release\net6.0\ref\Data.dll
