@@ -13,10 +13,10 @@ builder.Services.ResolveDependencies();
 builder.Services.AddDbContext<MeuDbContext>(options =>
 {
     //MYSQL
-    options.UseMySql("server=localhost;initial catalog=BancoBB;uid=root;pwd=Root",
-    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.31-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    options.UseMySql("server=mysql-banco-api.mysql.database.azure.com;initial catalog=BancoBB;uid=MysqlRoot;pwd=4Ucode00",
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
     //SQLSERVER
-    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 });
 
