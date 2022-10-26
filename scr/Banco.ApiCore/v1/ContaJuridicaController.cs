@@ -7,6 +7,7 @@ using Banco.ApiCore.Controllers;
 
 namespace Banco.ApiCore.v1
 {
+
     [Route("v1/contaJuridica/api")]
     public class ContaJuridicaController : HomeController
     {

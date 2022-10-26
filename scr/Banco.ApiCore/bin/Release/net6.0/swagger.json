@@ -1,8 +1,19 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Banco.ApiCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-    "version": "1.0"
+    "title": "ToDo API",
+    "description": "A simple example ASP.NET Core Web API",
+    "termsOfService": "https://example.com/terms",
+    "contact": {
+      "name": "Nicky Liu",
+      "url": "https://www.zedotech.com",
+      "email": "nicky@zedotech.com"
+    },
+    "license": {
+      "name": "Use under LICX",
+      "url": "https://example.com/license"
+    },
+    "version": "v1"
   },
   "paths": {
     "/v1/contaFisica/api": {
