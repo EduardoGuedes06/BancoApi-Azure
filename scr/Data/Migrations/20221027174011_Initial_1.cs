@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Initial_1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,7 +23,8 @@ namespace Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ContaCorrente = table.Column<string>(type: "varchar(10)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Senha8dig = table.Column<int>(type: "INT", nullable: false),
+                    Senha8dig = table.Column<string>(type: "varchar(8)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Senha6dig = table.Column<string>(type: "varchar(6)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     UsuarioLogin = table.Column<string>(type: "varchar(35)", nullable: false)
@@ -47,7 +48,8 @@ namespace Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Usuario = table.Column<string>(type: "varchar(35)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Senha8Dig = table.Column<int>(type: "INT", nullable: false),
+                    Senha8Dig = table.Column<string>(type: "varchar(8)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     Senha6Dig = table.Column<string>(type: "varchar(6)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     UsuarioLogin = table.Column<string>(type: "varchar(35)", nullable: false)

@@ -17,10 +17,13 @@ namespace Banco.ApiCore.ViewModel
         public string ContaCorrente { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
-        public int Senha8dig { get; set; }
+        public string Senha8dig { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public string Senha6dig { get; set; }
+
+        public string? UsuarioLogin { get; set; }
+        public DateTime? DataCriacao { get; set; }
 
 
     }

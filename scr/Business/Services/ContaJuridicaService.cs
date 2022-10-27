@@ -22,6 +22,12 @@ namespace Business.Services
                 return false;
             }
 
+            conta.CNPJ = conta.CNPJ.Replace(".", "");
+
+            conta.CNPJ = conta.CNPJ.Replace("/", "");
+
+            conta.CNPJ = conta.CNPJ.Replace("-", "");
+
             await _contaJuridicaRepository.Adicionar(conta);
             return true;
         }

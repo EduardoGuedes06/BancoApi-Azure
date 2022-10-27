@@ -24,7 +24,7 @@ namespace Data.Mappings
 
             builder.Property(p => p.Senha8Dig)
                 .IsRequired()
-                .HasColumnType("INT");
+                .HasColumnType("varchar(8)");
 
             builder.Property(p => p.Senha6Dig)
                 .IsRequired()

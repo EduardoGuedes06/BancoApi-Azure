@@ -23,10 +23,15 @@ namespace Business.Services
             }
 
 
+            conta.CPF = conta.CPF.Replace(".", "");
+
+            conta.CPF = conta.CPF.Replace("/", "");
+
+            conta.CPF = conta.CPF.Replace("-", "");
 
 
 
-                await _contaFisicaRepository.Adicionar(conta);
+            await _contaFisicaRepository.Adicionar(conta);
             return true;
 
         }

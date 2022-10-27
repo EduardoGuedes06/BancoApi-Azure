@@ -44,8 +44,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(6)");
 
-                    b.Property<int>("Senha8dig")
-                        .HasColumnType("INT");
+                    b.Property<string>("Senha8dig")
+                        .IsRequired()
+                        .HasColumnType("varchar(8)");
 
                     b.Property<string>("UsuarioLogin")
                         .IsRequired()
@@ -77,8 +78,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(6)");
 
-                    b.Property<int>("Senha8Dig")
-                        .HasColumnType("INT");
+                    b.Property<string>("Senha8Dig")
+                        .IsRequired()
+                        .HasColumnType("varchar(8)");
 
                     b.Property<string>("Usuario")
                         .IsRequired()

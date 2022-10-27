@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20221021184337_Initial")]
-    partial class Initial
+    [Migration("20221027174011_Initial_1")]
+    partial class Initial_1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,8 +46,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(6)");
 
-                    b.Property<int>("Senha8dig")
-                        .HasColumnType("INT");
+                    b.Property<string>("Senha8dig")
+                        .IsRequired()
+                        .HasColumnType("varchar(8)");
 
                     b.Property<string>("UsuarioLogin")
                         .IsRequired()
@@ -79,8 +80,9 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(6)");
 
-                    b.Property<int>("Senha8Dig")
-                        .HasColumnType("INT");
+                    b.Property<string>("Senha8Dig")
+                        .IsRequired()
+                        .HasColumnType("varchar(8)");
 
                     b.Property<string>("Usuario")
                         .IsRequired()
