@@ -13,11 +13,16 @@ namespace Business.Models
             Id = Guid.NewGuid();
             DataCriacao = DateTime.Now;
 
+            if (UsuarioLogin == null)
+            {
+                UsuarioLogin = "Sistema";
+            }
+
         }
 
         public Guid Id { get; set; }
 
-        public string UsuarioLogin = "Usuario";
+        public string UsuarioLogin { get; set; }
         public DateTime DataCriacao { get; set; }
     }
 }

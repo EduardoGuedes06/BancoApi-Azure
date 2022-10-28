@@ -22,6 +22,12 @@ namespace Business.Services
                 return false;
             }
 
+            if (_contaJuridicaRepository.Buscar(c => c.Usuario == conta.Usuario).Result.Any())
+            {
+                Notificar("Usuario já Cadastrado.");
+                return false;
+            }
+
             conta.CNPJ = conta.CNPJ.Replace(".", "");
 
             conta.CNPJ = conta.CNPJ.Replace("/", "");
