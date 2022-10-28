@@ -23,15 +23,15 @@ builder.Services.AddDbContext<MeuDbContext>(options =>
 
 });
 
-//builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//{
-//    //MYSQL
-//    options.UseMySql("server=mysql-banco-api.mysql.database.azure.com;initial catalog=BancoBB;uid=MysqlRoot;pwd=4Ucode00",
-//    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-//    //SQLSERVER
-//    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    //MYSQL
+    options.UseMySql("server=mysql-banco-api.mysql.database.azure.com;initial catalog=BancoBB;uid=MysqlRoot;pwd=4Ucode00",
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    //SQLSERVER
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
-//});
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
