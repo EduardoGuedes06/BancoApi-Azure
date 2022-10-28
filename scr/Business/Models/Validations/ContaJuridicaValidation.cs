@@ -1,5 +1,10 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Business.Models.Validations
 {
     public class ContaJuridicaValidation : AbstractValidator<ContaJuridica>
@@ -17,6 +22,10 @@ namespace Business.Models.Validations
             RuleFor(c => c.Usuario)
                 .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
                 .Length(35).WithMessage("O campo {PropertyName} precisa ter {MaxLength} caracteres");
+
+            RuleFor(c => c.Senha8dig)
+                .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
+                .Length(8).WithMessage("O campo {PropertyName} precisa ter {MaxLength} caracteres");
 
             RuleFor(c => c.Senha6Dig)
                  .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")

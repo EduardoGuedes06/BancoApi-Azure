@@ -22,8 +22,7 @@ namespace Banco.ApiCore.ViewModel
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public string Senha6dig { get; set; }
-        public string? UsuarioLogin { get; set; }
-        public DateTime? DataCriacao { get; set; }
+
     }
     
 }

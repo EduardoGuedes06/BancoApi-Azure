@@ -78,7 +78,7 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(6)");
 
-                    b.Property<string>("Senha8Dig")
+                    b.Property<string>("Senha8dig")
                         .IsRequired()
                         .HasColumnType("varchar(8)");
 

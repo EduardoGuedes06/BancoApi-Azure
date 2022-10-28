@@ -4,11 +4,13 @@ using Business.Interfaces;
 using Business.Models;
 using Microsoft.AspNetCore.Mvc;
 using Banco.ApiCore.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
-namespace Banco.ApiCore.v1
+namespace Banco.ApiCore.V1.Controllers
 {
-
-    [Route("v1/contaJuridica/api")]
+    [Authorize]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/contajuridica")]
     public class ContaJuridicaController : HomeController
     {
         private readonly IContaJuridicaRepository _contaJuridicaRepository;
@@ -18,7 +20,7 @@ namespace Banco.ApiCore.v1
         public ContaJuridicaController(IContaJuridicaRepository contaJuridicaRepository,
                                        IContaJuridicaService contaJuridicaService,
                                        INotificador notificador,
-                                       IMapper mapper) : base(notificador)
+                                       IMapper mapper, IUser user) : base(notificador, user)
         {
             _contaJuridicaRepository = contaJuridicaRepository;
             _contaJuridicaService = contaJuridicaService;

@@ -22,7 +22,7 @@ namespace Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(35)");
 
-            builder.Property(p => p.Senha8Dig)
+            builder.Property(p => p.Senha8dig)
                 .IsRequired()
                 .HasColumnType("varchar(8)");
 

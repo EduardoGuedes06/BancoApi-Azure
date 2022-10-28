@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "scr\Business\Bu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "scr\Data\Data.csproj", "{E9FF1F06-3128-4F66-974B-327EAE39B5D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco.ApiCore", "scr\Banco.ApiCore\Banco.ApiCore.csproj", "{232F6365-F6DC-4987-A108-E6E8B539CB4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banco.ApiCore", "scr\Banco.ApiCore\Banco.ApiCore.csproj", "{232F6365-F6DC-4987-A108-E6E8B539CB4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

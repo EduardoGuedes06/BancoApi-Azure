@@ -16,6 +16,7 @@ namespace Business.Models
         }
 
         public Guid Id { get; set; }
+
         public string UsuarioLogin = "Usuario";
         public DateTime DataCriacao { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Business.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Banco.ApiCore.ViewModel
 {
@@ -21,10 +22,6 @@ namespace Banco.ApiCore.ViewModel
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public string Senha6dig { get; set; }
-
-        public string? UsuarioLogin { get; set; }
-        public DateTime? DataCriacao { get; set; }
-
 
     }
 }

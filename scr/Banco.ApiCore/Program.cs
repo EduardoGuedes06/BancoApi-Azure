@@ -1,41 +1,19 @@
-using Banco.ApiCore.Configuration;
-using Data.Context;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
+using Banco.ApiCore.Configuration;
+using Banco.ApiCore.Data;
+using Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Configuration
+    .SetBasePath(builder.Environment.ContentRootPath)
+    .AddJsonFile("appsettings.json", true, true)
+    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", true, true)
+    .AddEnvironmentVariables();
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Version = "v1",
-                    Title = "ToDo API",
-                    Description = "A simple example ASP.NET Core Web API",
-                    TermsOfService = new Uri("https://example.com/terms"),
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Nicky Liu",
-                        Email = "nicky@zedotech.com",
-                        Url = new Uri("https://www.zedotech.com"),
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Use under LICX",
-                        Url = new Uri("https://example.com/license"),
-                    }
-                });
-            });
-builder.Services.AddCors();
+builder.Services.AddIdentityConfig(builder.Configuration);
 
-
-
-
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.ResolveDependencies();
 builder.Services.AddDbContext<MeuDbContext>(options =>
 {
     //MYSQL
@@ -46,27 +24,26 @@ builder.Services.AddDbContext<MeuDbContext>(options =>
 
 });
 
-var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c=>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-    });
-}
+    //MYSQL
+    options.UseMySql("server=mysql-banco-api.mysql.database.azure.com;initial catalog=BancoBB;uid=MysqlRoot;pwd=4Ucode00",
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql")).UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    //SQLSERVER
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
-app.UseHttpsRedirection();
+});
 
-app.UseAuthorization();
+builder.Services.AddApiConfig();
+builder.Services.AddSwaggerConfig();
 
-app.UseCors(x => x
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    .SetIsOriginAllowed(origin => true) // allow any origin
-    .AllowCredentials());
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.ResolveDependencies();
 
-app.MapControllers();
+var app = builder.Build();
+var apiVersionDescriptionProvider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
+app.UseApiConfig(app.Environment);
+app.UseSwaggerConfig(apiVersionDescriptionProvider);
 
 app.Run();

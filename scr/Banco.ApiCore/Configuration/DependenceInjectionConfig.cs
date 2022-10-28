@@ -3,6 +3,7 @@ using Business.Interfaces;
 using Business.Services;
 using Data.Context;
 using Data.Repository;
+using Banco.ApiCore.Extensions;
 
 namespace Banco.ApiCore.Configuration
 {
@@ -19,6 +20,8 @@ namespace Banco.ApiCore.Configuration
             services.AddScoped<IContaJuridicaService, ContaJuridicaService>();
 
             services.AddScoped<INotificador, Notificador>();
+            services.AddScoped<IUser, AspNetUser>();
+
             return services;
         }
     }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Data.Migrations
 {
-    public partial class Initial_1 : Migration
+    public partial class _initial_1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,7 +48,7 @@ namespace Data.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Usuario = table.Column<string>(type: "varchar(35)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Senha8Dig = table.Column<string>(type: "varchar(8)", nullable: false)
+                    Senha8dig = table.Column<string>(type: "varchar(8)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Senha6Dig = table.Column<string>(type: "varchar(6)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
