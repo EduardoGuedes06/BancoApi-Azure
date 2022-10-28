@@ -6,7 +6,7 @@
     <WebStackScaffolding_ControllerDialogWidth>650</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_DbContextDialogWidth>650</WebStackScaffolding_DbContextDialogWidth>
     <ActiveDebugProfile>Banco.Api</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\.github\workflows\main_apiwebcore.yml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\Properties\PublishProfiles\ApiWebCore - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

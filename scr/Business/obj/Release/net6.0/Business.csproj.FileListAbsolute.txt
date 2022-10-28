@@ -34,3 +34,5 @@ C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Business\obj\Release\net6.0\B
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Business\obj\Release\net6.0\refint\Business.dll
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Business\obj\Release\net6.0\Business.pdb
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Business\obj\Release\net6.0\ref\Business.dll
+C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Business\bin\Release\net6.0\Business.runtimeconfig.json
+C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Business\obj\Release\net6.0\Business.genruntimeconfig.cache
