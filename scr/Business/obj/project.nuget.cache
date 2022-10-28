@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K23FUpn/aeOVEvbMF7KVUtlvBNBWTSCbJdEwrUfCtbqTh8S786YtvAv/At8SSRj6AojV/bn6VNvaYbB5JrzkIw==",
+  "dgSpecHash": "bNKs/qDbpCAdJE4gUDjQv/DkY1YZkNiQj07lX2KtKeyx5NvkAM0i9E3F8cXNvYpjJotkzyk555y73hrsoYn5PA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\scr\\Business\\Business.csproj",
+  "projectFilePath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-MVC-AZURE\\scr\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

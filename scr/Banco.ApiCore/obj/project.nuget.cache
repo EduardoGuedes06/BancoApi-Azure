@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4RxLpbLOueHD8neo+RuEipq9C6GFEPyBWEDd1UydFUjVdiVNs3dUVk6qmzYqRP5kx+KIKxXSi5e6O8zD79HqZQ==",
+  "dgSpecHash": "CanYIGRBPTttYUyy8ROYvIM3l/T0GaHS9YAOUK1HBdTObMqjy9l2mdjIIVkF97uCV3MQoo1p1MIl79X6nd3oCg==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\scr\\Banco.ApiCore\\Banco.ApiCore.csproj",
+  "projectFilePath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-MVC-AZURE\\scr\\Banco.ApiCore\\Banco.ApiCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
