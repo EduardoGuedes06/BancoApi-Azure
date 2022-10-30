@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Banco.ApiCore.V1.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/contafisica")]
     public class ContaFisicaController : HomeController

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Banco.ApiCore.V1.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/contajuridica")]
     public class ContaJuridicaController : HomeController
