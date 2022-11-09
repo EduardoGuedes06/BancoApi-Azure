@@ -4,7 +4,6 @@ using Business.Interfaces;
 using Business.Models;
 using Microsoft.AspNetCore.Mvc;
 using Banco.ApiCore.Controllers;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Banco.ApiCore.V1.Controllers
 {
@@ -16,6 +15,7 @@ namespace Banco.ApiCore.V1.Controllers
         private readonly IContaJuridicaRepository _contaJuridicaRepository;
         private readonly IContaJuridicaService _contaJuridicaService;
         private readonly IMapper _mapper;
+
 
         public ContaJuridicaController(IContaJuridicaRepository contaJuridicaRepository,
                                        IContaJuridicaService contaJuridicaService,

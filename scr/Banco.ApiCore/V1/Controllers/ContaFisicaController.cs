@@ -48,7 +48,19 @@ namespace Banco.ApiCore.V1.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ContaFisicaViewModel>> Adicionar(ContaFisicaViewModel ContaModel)
+        public async Task<ActionResult<ContaFisicaViewModel>> VerificarRegistro(ContaFisicaViewModel ContaModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            await _contaFisicaService.Verificar(_mapper.Map<ContaFisica>(ContaModel));
+
+
+            return CustomResponse(ContaModel);
+        }
+
+        [Route("register")]
+        [HttpPost]
+        public async Task<ActionResult<ContaFisicaViewModel>> AdicionarRegistro(ContaFisicaViewModel ContaModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 

@@ -646,7 +646,6 @@ C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.0\Banco.ApiCore.AssemblyInfoInputs.cache
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.0\Banco.ApiCore.AssemblyInfo.cs
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.0\Banco.ApiCore.csproj.CoreCompileInputs.cache
-C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.0\Banco.ApiCore.MvcApplicationPartsAssemblyInfo.cs
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.0\Banco.ApiCore.MvcApplicationPartsAssemblyInfo.cache
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.0\staticwebassets.build.json
 C:\Projetos\C#\PROJETOS 4UCode\BANCO-API-AZURE\scr\Banco.ApiCore\obj\Debug\net6.0\staticwebassets.development.json
