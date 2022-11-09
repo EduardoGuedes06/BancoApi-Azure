@@ -4,6 +4,7 @@ using Business.Interfaces;
 using Business.Models;
 using Microsoft.AspNetCore.Mvc;
 using Banco.ApiCore.Controllers;
+using Business.Services;
 
 namespace Banco.ApiCore.V1.Controllers
 {
@@ -45,12 +46,25 @@ namespace Banco.ApiCore.V1.Controllers
 
             return Conta;
         }
+
+        [Route("adicionar")]
         [HttpPost]
-        public async Task<ActionResult<ContaJuridicaViewModel>> Adicionar(ContaJuridicaViewModel ContaModel)
+        public async Task<ActionResult<ContaJuridicaViewModel>> AdicionarRegistro(ContaJuridicaViewModel ContaModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
             await _contaJuridicaService.Adicionar(_mapper.Map<ContaJuridica>(ContaModel));
+
+            return CustomResponse(ContaModel);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<ContaJuridicaViewModel>> VerificarRegistro(ContaJuridicaViewModel ContaModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            await _contaJuridicaService.Verificar(_mapper.Map<ContaJuridica>(ContaModel));
+
 
             return CustomResponse(ContaModel);
         }

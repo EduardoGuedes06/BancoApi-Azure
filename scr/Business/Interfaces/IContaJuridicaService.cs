@@ -6,6 +6,7 @@ namespace Business.Interfaces
     {
 
         Task<bool> Adicionar(ContaJuridica conta);
+        Task<bool> Verificar(ContaJuridica conta);
         Task Atualizar(ContaJuridica conta);
         Task Remover(Guid id);
     }

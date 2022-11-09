@@ -27,7 +27,7 @@ namespace Business.Models.Validations
                 .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
                 .Length(8).WithMessage("O campo {PropertyName} precisa ter {MaxLength} caracteres");
 
-            RuleFor(c => c.Senha6Dig)
+            RuleFor(c => c.Senha6dig)
                  .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
                  .Length(6).WithMessage("O campo {PropertyName} precisa ter {MaxLength} caracteres");
 

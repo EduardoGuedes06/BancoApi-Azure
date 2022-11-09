@@ -58,7 +58,7 @@ namespace Banco.ApiCore.V1.Controllers
             return CustomResponse(ContaModel);
         }
 
-        [Route("register")]
+        [Route("adicionar")]
         [HttpPost]
         public async Task<ActionResult<ContaFisicaViewModel>> AdicionarRegistro(ContaFisicaViewModel ContaModel)
         {
