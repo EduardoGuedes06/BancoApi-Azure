@@ -55,6 +55,12 @@ namespace Business.Services
 
         public async Task<bool> Verificar(ContaFisica conta)
         {
+            conta.CPF = conta.CPF.Replace(".", "");
+
+            conta.CPF = conta.CPF.Replace("/", "");
+
+            conta.CPF = conta.CPF.Replace("-", "");
+
             if (_contaFisicaRepository.Buscar(c => c.CPF == conta.CPF).Result.Any())
             {
                 if (_contaFisicaRepository.Buscar(c => c.Agencia == conta.Agencia).Result.Any())

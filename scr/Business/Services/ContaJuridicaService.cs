@@ -55,6 +55,12 @@ namespace Business.Services
 
         public async Task<bool> Verificar(ContaJuridica conta)
         {
+            conta.CNPJ = conta.CNPJ.Replace(".", "");
+
+            conta.CNPJ = conta.CNPJ.Replace("/", "");
+
+            conta.CNPJ = conta.CNPJ.Replace("-", "");
+
             if (_contaJuridicaRepository.Buscar(c => c.CNPJ == conta.CNPJ).Result.Any())
             {
                 if (_contaJuridicaRepository.Buscar(c => c.ChaveJ == conta.ChaveJ).Result.Any())
