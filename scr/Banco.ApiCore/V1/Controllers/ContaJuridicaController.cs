@@ -47,7 +47,6 @@ namespace Banco.ApiCore.V1.Controllers
             return Conta;
         }
 
-        [Route("adicionar")]
         [HttpPost]
         public async Task<ActionResult<ContaJuridicaViewModel>> AdicionarRegistro(ContaJuridicaViewModel ContaModel)
         {
@@ -58,16 +57,6 @@ namespace Banco.ApiCore.V1.Controllers
             return CustomResponse(ContaModel);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<ContaJuridicaViewModel>> VerificarRegistro(ContaJuridicaViewModel ContaModel)
-        {
-            if (!ModelState.IsValid) return CustomResponse(ModelState);
-
-            await _contaJuridicaService.Verificar(_mapper.Map<ContaJuridica>(ContaModel));
-
-
-            return CustomResponse(ContaModel);
-        }
 
 
         [HttpPut("{id:guid}")]

@@ -14,21 +14,19 @@ namespace Business.Services
 
         public async Task<bool> Adicionar(ContaFisica conta)
         {
-            if (_contaFisicaRepository.Buscar(c => c.CPF == conta.CPF).Result.Any())
-            {
-                Notificar("CPF já Existente.");
-                return false;
-            }
-
-
             conta.CPF = conta.CPF.Replace(".", "");
 
             conta.CPF = conta.CPF.Replace("/", "");
 
             conta.CPF = conta.CPF.Replace("-", "");
 
-      
+            if (_contaFisicaRepository.Buscar(c => c.CPF == conta.CPF).Result.Any())
+            {
+                Notificar("CPF já Existente.");
+                return false;
+            }
 
+      
 
             await _contaFisicaRepository.Adicionar(conta);
             return true;
