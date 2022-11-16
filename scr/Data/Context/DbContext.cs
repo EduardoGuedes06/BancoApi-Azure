@@ -9,7 +9,6 @@ namespace Data.Context
 
         public DbSet<ContaFisica> ContaBancarias { get; set; }
         public DbSet<ContaJuridica> ContaJuridicas { get; set; }
-        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             foreach (var property in modelBuilder.Model.GetEntityTypes()

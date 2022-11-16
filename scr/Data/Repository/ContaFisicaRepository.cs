@@ -1,7 +1,7 @@
 ﻿using Business.Interfaces;
 using Business.Models;
 using Data.Context;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace Data.Repository
 {
@@ -11,6 +11,15 @@ namespace Data.Repository
         {
 
         }
+
+        public virtual async Task Adicionar(ContaFisica contaFisica)
+        {
+
+
+            DbSet.Add(contaFisica);
+            await SaveChanges();
+        }
+
 
     }
 }

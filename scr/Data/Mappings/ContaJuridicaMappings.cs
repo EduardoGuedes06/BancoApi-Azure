@@ -34,10 +34,6 @@ namespace Data.Mappings
                 .IsRequired()
                 .HasColumnType("Datetime");
 
-            builder.Property(p => p.UsuarioLogin)
-                .IsRequired()
-                .HasColumnType("varchar(35)");
-
             builder.ToTable("ContaJuridica");
         }
     }

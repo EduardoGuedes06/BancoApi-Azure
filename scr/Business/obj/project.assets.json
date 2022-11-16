@@ -751,11 +751,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\scr\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\BANCO-API-AZURE\\scr\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\scr\\Business\\Business.csproj",
+      "projectPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\BANCO-API-AZURE\\scr\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\scr\\Business\\obj\\",
+      "outputPath": "C:\\Projetos\\C#\\PROJETOS 4UCode\\BANCO-API-AZURE\\BANCO-API-AZURE\\scr\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

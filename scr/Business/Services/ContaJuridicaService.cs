@@ -16,6 +16,13 @@ namespace Business.Services
 
         public async Task<bool> Adicionar(ContaJuridica conta)
         {
+            conta.CNPJ = conta.CNPJ.Replace(".", "");
+
+            conta.CNPJ = conta.CNPJ.Replace("/", "");
+
+            conta.CNPJ = conta.CNPJ.Replace("-", "");
+
+
             if (_contaJuridicaRepository.Buscar(c => c.CNPJ == conta.CNPJ).Result.Any())
             {
                 Notificar("CNPJ já Existente.");
@@ -27,13 +34,6 @@ namespace Business.Services
                 Notificar("Usuario já Cadastrado.");
                 return false;
             }
-
-            conta.CNPJ = conta.CNPJ.Replace(".", "");
-
-            conta.CNPJ = conta.CNPJ.Replace("/", "");
-
-            conta.CNPJ = conta.CNPJ.Replace("-", "");
-
             await _contaJuridicaRepository.Adicionar(conta);
             return true;
         }

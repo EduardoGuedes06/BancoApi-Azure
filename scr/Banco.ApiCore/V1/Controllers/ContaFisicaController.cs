@@ -3,6 +3,7 @@ using Banco.ApiCore.Controllers;
 using Banco.ApiCore.ViewModel;
 using Business.Interfaces;
 using Business.Models;
+using Business.Services;
 using Data.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -53,7 +54,6 @@ namespace Banco.ApiCore.V1.Controllers
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
             await _contaFisicaService.Adicionar(_mapper.Map<ContaFisica>(ContaModel));
-
 
             return CustomResponse(ContaModel);
         }
