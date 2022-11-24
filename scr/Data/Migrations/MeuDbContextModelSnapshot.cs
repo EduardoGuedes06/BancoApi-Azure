@@ -48,10 +48,6 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(8)");
 
-                    b.Property<string>("UsuarioLogin")
-                        .IsRequired()
-                        .HasColumnType("varchar(35)");
-
                     b.HasKey("Id");
 
                     b.ToTable("ContaFisica", (string)null);
@@ -83,10 +79,6 @@ namespace Data.Migrations
                         .HasColumnType("varchar(8)");
 
                     b.Property<string>("Usuario")
-                        .IsRequired()
-                        .HasColumnType("varchar(35)");
-
-                    b.Property<string>("UsuarioLogin")
                         .IsRequired()
                         .HasColumnType("varchar(35)");
 

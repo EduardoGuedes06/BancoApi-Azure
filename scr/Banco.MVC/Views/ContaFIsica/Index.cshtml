@@ -5,14 +5,19 @@
 }
 
 <h1>@ViewData["Title"]</h1>
+
+<p supress-by-claim-name="ContaFisica" supress-by-claim-value="Adicionar">
+    <a class="btn btn-info" asp-action="Create">Nova Conta</a>
+</p>
+
 <table class="table">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.CPF)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CPF)
+                @Html.DisplayNameFor(model => model.DataCriacao)
             </th>
             
             <th></th>
@@ -22,14 +27,14 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                    @Html.DisplayNameFor(model => model.CPF)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CPF)
+                    @Html.DisplayNameFor(model => model.DataCriacao)
             </td>
             
             <td class="text-right">
-                <a class="btn btn-info" asp-controller="ContaFisica" asp-action="Details" asp-route-id="@item.Id"><spam class="fa fa-search"></spam>Detalhes</a>              
+                <a class="btn btn-warning" asp-controller="ContaFisica" asp-action="Details" asp-route-id="@item.Id"><spam class="fa fa-search"></spam>Detalhes</a>              
                 <a class="btn btn-danger" supress-by-claim-name="ContaFisica" supress-by-claim-value="Excluir"  asp-action="Delete" asp-route-id="@item.Id"><spam class="fa fa-trash"></spam>Excluir</a>
             </td>
         </tr>

@@ -5,7 +5,7 @@ namespace Banco.MVC.Extensions
 {
     public class EmailTagHelper : TagHelper
     {
-        public string EmailDomain { get; set; } = "tiagol.nogueira@gmail.com";
+        public string EmailDomain { get; set; } = "eduardo.guedes@gmail.com";
         public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
         {
             output.TagName = "a";

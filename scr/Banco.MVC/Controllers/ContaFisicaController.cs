@@ -2,6 +2,10 @@
 using Business.Interfaces;
 using AutoMapper;
 using Banco.MVC.ViewModel;
+using Business.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Business.Services;
 
 namespace Banco.MVC.Controllers
 {
@@ -26,6 +30,27 @@ namespace Banco.MVC.Controllers
         public async Task<IActionResult> Index()
         {
             return View(_mapper.Map<IEnumerable<ContaFisicaViewModel>>(await _contaFisicaRepository.ObterTodos()));
+        }
+
+        //[AllowAnonymous]
+        [Route("nova-contafisica")]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [Route("nova-contafisica")]
+        [HttpPost]
+        public async Task<IActionResult> Create(ContaFisicaViewModel contafisicaViewModel)
+        {
+            if (!ModelState.IsValid) return View(contafisicaViewModel);
+
+            var fornecedor = _mapper.Map<ContaFisica>(contafisicaViewModel);
+            await _contaFisicaService.Adicionar(fornecedor);
+
+            if (!OperacaoValida()) return View(contafisicaViewModel);
+
+            return RedirectToAction("Index");
         }
 
         //[AllowAnonymous]

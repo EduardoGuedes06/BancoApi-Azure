@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projetos/C\#/PROJETOS 4UCode/BANCO-MVC-AZURE/scr/Banco.MVC/Views/ContaFIsica/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFGSXNpY2FcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projetos/C\#/PROJETOS 4UCode/BANCO-MVC-AZURE/scr/Banco.MVC/Views/ContaFIsica/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFGSXNpY2FcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,6 +33,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Projetos/C\#/PROJETOS 4UCode/BANCO-MVC-AZURE/scr/Banco.MVC/Views/ContaFIsica/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFGSXNpY2FcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos/C\#/PROJETOS 4UCode/BANCO-MVC-AZURE/scr/Banco.MVC/Views/ContaJuridica/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFKdXJpZGljYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projetos/C\#/PROJETOS 4UCode/BANCO-MVC-AZURE/scr/Banco.MVC/Views/ContaJuridica/Delete.cshtml]

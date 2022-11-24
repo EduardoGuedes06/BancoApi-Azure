@@ -1,0 +1,54 @@
+﻿@model Banco.MVC.ViewModel.ContaFisicaViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ContaFisica</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Agencia" class="control-label"></label>
+                <input asp-for="Agencia" class="form-control" />
+                <span asp-validation-for="Agencia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContaCorrente" class="control-label"></label>
+                <input asp-for="ContaCorrente" class="form-control" />
+                <span asp-validation-for="ContaCorrente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha8dig" class="control-label"></label>
+                <input asp-for="Senha8dig" class="form-control" />
+                <span asp-validation-for="Senha8dig" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha6dig" class="control-label"></label>
+                <input asp-for="Senha6dig" class="form-control" />
+                <span asp-validation-for="Senha6dig" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

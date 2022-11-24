@@ -8,7 +8,7 @@ namespace Banco.MVC.Configuration
     {
         public AutoMapperConfig()
         {
-            CreateMap<ContaFisicaViewModel, ContaFisica > ().ReverseMap();
+            CreateMap<ContaFisicaViewModel, ContaFisica >().ReverseMap();
             CreateMap<ContaJuridicaViewModel, ContaJuridica >().ReverseMap();
 
         }

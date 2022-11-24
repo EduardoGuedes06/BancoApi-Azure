@@ -2,6 +2,7 @@
 using Business.Interfaces;
 using AutoMapper;
 using Banco.MVC.ViewModel;
+using Business.Models;
 
 namespace Banco.MVC.Controllers
 {
@@ -27,6 +28,29 @@ namespace Banco.MVC.Controllers
         {
             return View(_mapper.Map<IEnumerable<ContaJuridicaViewModel>>(await _contaJuridicaRepository.ObterTodos()));
         }
+
+
+        [Route("nova-contajuridica")]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [Route("nova-contajuridica")]
+        [HttpPost]
+        public async Task<IActionResult> Create(ContaJuridicaViewModel contajuridicaViewModel)
+        {
+            if (!ModelState.IsValid) return View(contajuridicaViewModel);
+
+            var fornecedor = _mapper.Map<ContaJuridica>(contajuridicaViewModel);
+            await _contaJuridicaService.Adicionar(fornecedor);
+
+            if (!OperacaoValida()) return View(contajuridicaViewModel);
+
+            return RedirectToAction("Index");
+        }
+
+
 
         //[AllowAnonymous]
         [Route("dados-da-conta-juridica/{id:guid}")]

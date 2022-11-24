@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Business.Models;
 
 namespace Banco.MVC.Data
 {
@@ -9,5 +10,6 @@ namespace Banco.MVC.Data
             : base(options)
         {
         }
+        public DbSet<Business.Models.ContaFisica> ContaFisica { get; set; }
     }
 }
